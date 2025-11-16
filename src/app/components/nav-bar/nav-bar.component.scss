@@ -68,6 +68,11 @@
   li{
     font-family: "Old Standard TT", serif;
     cursor: pointer;
+    a{
+      text-decoration: none;
+      color: inherit;
+      font-family: inherit;
+    }
   }
 }
 

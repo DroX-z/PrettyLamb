@@ -36,11 +36,32 @@
 
 <div class="row g-3">
 
-  <div class="col-6 col-md-4 d-flex flex-column align-items-center" *ngFor="let item of filteredProducts">
-    <img [src]="item.img" class="img-fluid mb-2" alt="">
+  <div  class="col-6 col-md-4 d-flex flex-column align-items-center"  *ngFor="let item of filteredProducts" (click)="selectProduct(item)">
+    <img  [src]="item.img" class="img-fluid mb-2" alt="">
+
     <p class="text-prod text-center mb-0">{{ item.name }}</p>
   </div>
 
 </div>
 
 </section>
+
+
+
+<!-- MODAL DESLIZANTE -->
+<div class="product-modal" [class.open]="modalOpen" [class.mobile]="isMobile">
+  <div class="modal-content">
+    <i class="bi bi-x-lg close-btn" (click)="closeModal()"></i>
+
+    <img [src]="selectedProduct?.img" class="img-modal mb-2" alt="">
+    <div class="modal-text">
+     <p class="name">{{ selectedProduct?.name }}</p>
+     <p class="name"><b>{{selectedProduct?.price}}</b></p>
+     <p>{{ selectedProduct?.description }}</p>
+     <button class="boton-prod mt-2" (click)="addToCart(selectedProduct)">Agregar</button>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY -->
+<div class="modal-overlay" *ngIf="modalOpen" (click)="closeModal()"></div>

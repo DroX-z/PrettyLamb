@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { Router, Event, NavigationEnd,RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,HomeComponent,NavBarComponent,FooterComponent],
+  imports: [RouterOutlet,NavBarComponent,FooterComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
    animations: [
@@ -24,5 +24,13 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class AppComponent {
+
+  constructor(private readonly router: Router,){
+     this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
   title = 'PrettyLamb';
 }
