@@ -1,0 +1,133 @@
+.favorites {
+  height: 90vh;
+  background-color: #F9F6ED;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.fav-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursive-title {
+  font-family: "Kapakana", cursive;
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -20px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: "Old Standard TT", serif;
+  font-size: 45px;
+}
+
+.cards {
+  background-color: #F9F6ED;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  overflow-x: hidden;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #F9F6ED;
+  border: none;
+}
+
+.card img {
+  width: 17vw;
+  height: auto;
+  border-radius: 8%;
+}
+
+.fav-btn {
+  width: 17.5vw;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 4rem;
+  background-color: transparent;
+  color: #3D5CA1;
+  border-color: #3D5CA1;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #3D5CA1;
+    border-color: transparent;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .fav-btn{
+    width: 50%;
+    background-color: #3D5CA1;
+    color: #F9F6ED;
+    border: none;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;          /* CENTRO REAL */
+    width: 90vw;        /* Puede seguir siendo 90vw */
+    height: 2px;
+    background-color: #3D5CA1;
+    transform: translate(-50%, -50%); /* centra la línea respecto al botón */
+    z-index: -1;
+  }
+
+  }
+
+  .favorites{
+    height: 70vh;
+  }
+
+  .cards {
+    padding-left: 0;
+    padding-right: 0;
+    overflow-x: auto;
+  }
+
+  .card {
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    flex-direction: row;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+  }
+
+  .card img {
+    min-width: 45vw;
+    width: 45vw;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+}

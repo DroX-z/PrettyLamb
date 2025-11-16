@@ -1,0 +1,33 @@
+<!-- NAV BAR -->
+<div class="col-12 nav">
+  <i class="bi bi-list" style="font-size: 2rem; cursor:pointer;" (click)="toggleSidebar()"></i>
+  <p routerLink="" class="logo">Pretty Lamb</p>
+  <i class="bi bi-geo-alt-fill" style="font-size: 2rem;"></i>
+</div>
+
+<!-- OVERLAY (tocar fuera cierra) -->
+<div class="overlay" *ngIf="sidebarOpen" (click)="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" [class.open]="sidebarOpen">
+
+  <!-- BOTÓN X DE CIERRE -->
+  <i class="bi bi-x-lg close-btn" (click)="closeSidebar()"></i>
+
+  <ul>
+    <li routerLink="menu">Menu</li>
+    <li>Flores + Cafe</li>
+    <li>Pretty Lamb Members</li>
+    <li>Sucursales</li>
+    <li>Conócenos</li>
+    <li style=" display:flex; flex-direction:row; gap: .75rem;"><i class="bi bi-instagram"></i><i class="bi bi-tiktok"></i></li>
+  </ul>
+
+  <div class="cards">
+      <div class="icons">
+      <i class="bi bi-credit-card"></i>
+      <i class="bi bi-paypal"></i>
+      </div>
+        <p>Presencia en uber eats</p>
+  </div>
+</div>

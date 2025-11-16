@@ -1,0 +1,120 @@
+.nav {
+  background-color: #3D5CA1;
+  color: #F9F6ED;
+  height: 12vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+}
+
+.logo{
+  font-size: 2.5rem;
+  font-family: "Old Standard TT", serif;
+  margin: 0;
+  cursor: pointer;
+}
+
+.cards {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    p{
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+  }
+
+#sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10rem;
+
+  top: 0;
+  left: -30vw;
+  transform: translateX(-100%);
+  width: auto;
+  height: 100vh;
+  background-color: #3D5CA1;
+  color: #F9F6ED;
+  padding: 2rem 2rem;
+  transition: left 0.35s ease;
+  z-index: 2000;
+  overflow-y: auto;
+}
+
+/* Cuando está abierto */
+#sidebar.open {
+  transform: translateX(0);
+  left: 0;
+}
+
+/* UL */
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 1.5rem;
+  li{
+    font-family: "Old Standard TT", serif;
+    cursor: pointer;
+  }
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ---- OVERLAY (fondo oscuro) ---- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.45);
+  z-index: 1500;
+}
+
+
+/* ==== Mobile ajustes ==== */
+@media(max-width: 768px) {
+  #sidebar {
+    width: auto;
+  }
+
+  #sidebar.open {
+    left: 0;
+  }
+
+  .nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+@media(max-width:768px){
+  .nav{
+      height: 10vh;
+      position: fixed;
+  }
+
+}

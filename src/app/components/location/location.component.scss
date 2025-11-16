@@ -1,0 +1,158 @@
+#location {
+  position: relative;
+}
+
+/* CONTENEDOR DEGRADADO */
+.fondo-degradado {
+  padding: 3rem 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 190, 189, 0.5) 35%,
+    rgba(249, 246, 237, 1) 100%
+  );
+}
+
+/* LINEA SUPERIOR */
+.linea-con-imagen {
+  position: absolute;
+  top: -1.5%;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  z-index: 10;
+}
+
+.linea-con-imagen::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(
+    to right,
+    transparent 10%,
+    #3D5CA1 50%,
+    transparent 90%
+  );
+}
+
+.imagen-centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2.5rem;
+  width: auto;
+}
+
+/* TEXTOS */
+.text-container {
+  width: 100%;
+  text-align: center;
+}
+
+/* CARD CONTAINER */
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+.loc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  width: 33%;
+  background-color: #F9F6ED;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.loc-card img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
+.loc-card .title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Old Standard TT", serif;
+}
+
+.loc-card .loc-btn {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4rem;
+  background-color: #F9F6ED;
+  color: #3D5CA1;
+  border: 2px solid #3D5CA1;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+/* Tablets y móviles grandes */
+@media (max-width: 992px) {
+  .loc-card {
+    width: 60%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .fondo-degradado {
+    padding: 2rem 1rem;
+  }
+
+  .linea-con-imagen {
+    top: -1.8%;
+  }
+
+  .loc-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .loc-card img {
+    max-height: 30vh;
+  }
+
+  .loc-card .title {
+    font-size: 1.3rem;
+  }
+
+  .loc-card .loc-btn {
+    bottom: -1rem;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .loc-card {
+    width: 100%;
+  }
+
+  .loc-card img {
+    max-height: 25vh;
+  }
+}

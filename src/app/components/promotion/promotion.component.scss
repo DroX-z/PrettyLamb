@@ -1,0 +1,135 @@
+
+.promotion{
+  height: 80vh;
+  background-color: #F9F6ED;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.prom-text{
+  width: 90%;
+  margin: 0;
+  gap: 3rem;
+  padding-left: 20%;
+  margin-bottom: 7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .texts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+    .text{
+    font-size: 1.25rem;
+  }
+  }
+
+}
+.prom-img{
+  width: 100%;
+
+  img{
+   width: 77.5%;
+   height: 45vh;
+   border-radius: .75rem;
+  }
+  p{
+    width: 77.5%;
+  }
+}
+
+.fav-btn {
+  width: 17.5vw;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 4rem;
+  background-color: transparent;
+  color: #3D5CA1;
+  border-color: #3D5CA1;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #3D5CA1;
+    border-color: transparent;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+   .fav-btn{
+    width: auto;
+    background-color: #3D5CA1;
+    color: #F9F6ED;
+    border: none;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;          /* CENTRO REAL */
+    width: 90vw;        /* Puede seguir siendo 90vw */
+    height: 2px;
+    background-color: #3D5CA1;
+    transform: translate(-50%, -50%); /* centra la línea respecto al botón */
+    z-index: -1;
+  }
+
+
+  }
+
+  .promotion {
+    flex-direction: column;       /* De row → column */
+    height: auto;                 /* Que crezca según contenido */
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .promotion > div {
+    width: 100% !important;       /* Col-6 ya no divide en 2 */
+  }
+
+  .prom-text {
+    padding-left: 0;
+    margin-bottom: 2rem;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .prom-text .texts {
+    align-items: center;
+  }
+
+  .prom-text button {
+    margin-top: 2rem;
+  }
+
+  .prom-img{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prom-img img {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .prom-img p {
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+  }
+}

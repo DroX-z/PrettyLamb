@@ -1,0 +1,86 @@
+.fav-btn {
+  width: 17.5vw;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 4rem;
+  background-color: transparent;
+  color: #3D5CA1;
+  border-color: #3D5CA1;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #3D5CA1;
+    border-color: transparent;
+    color: white;
+  }
+}
+  .about{
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90vh;
+  background-color: #F9F6ED;
+
+  gap: 5%;
+  .col-ab{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+
+
+    img{
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      border-radius: 1.2rem;
+      width: 100%;
+      height: 80%;
+    }
+  }
+
+  }
+
+
+
+
+
+/* ===== TABLET (de 992px hacia abajo) ===== */
+@media (max-width: 992px) {
+
+  .about {
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    width: 100%;
+
+    .col-ab {
+    width: 100%;
+    height: auto;
+    text-align: start;
+  }
+
+
+  .col-ab img {
+    height: auto;
+  }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+

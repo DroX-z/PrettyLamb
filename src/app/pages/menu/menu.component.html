@@ -1,0 +1,46 @@
+ <div class="text-center banner">
+    <h2 class="cursive-title">Nuestro</h2>
+    <h2 class="title">Menú</h2>
+  </div>
+
+
+<section id="menu" class="container-fluid py-4">
+  <!-- Categorías -->
+  <div class="row text-center mb-4 justify-content-center">
+
+    <!-- Bebidas -->
+    <div class="col-4 col-md-2 py-2"
+         (click)="selectCategory('bebidas')"
+         [class.borders]="selected === 'bebidas'">
+      <i class="bi bi-cup-straw fs-1 mb-2"></i>
+      <p class="pointer">Bebidas</p>
+    </div>
+
+    <!-- Bagels -->
+    <div class="col-4 col-md-2 py-2"
+         (click)="selectCategory('bagels')"
+         [class.borders]="selected === 'bagels'">
+      <i class="bi bi-basket2 fs-1 mb-2"></i>
+      <p class="pointer">Bagels</p>
+    </div>
+
+    <!-- Flores -->
+    <div class="col-4 col-md-2 py-2"
+         (click)="selectCategory('flowers')"
+         [class.borders]="selected === 'flowers'">
+      <i class="bi bi-flower1 fs-1 mb-2"></i>
+      <p class="pointer">Flowers</p>
+    </div>
+
+  </div>
+
+<div class="row g-3">
+
+  <div class="col-6 col-md-4 d-flex flex-column align-items-center" *ngFor="let item of filteredProducts">
+    <img [src]="item.img" class="img-fluid mb-2" alt="">
+    <p class="text-prod text-center mb-0">{{ item.name }}</p>
+  </div>
+
+</div>
+
+</section>

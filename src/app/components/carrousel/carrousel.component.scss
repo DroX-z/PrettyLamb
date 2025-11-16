@@ -1,0 +1,66 @@
+
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #FCCCF0;
+  color: black;
+  padding: 10px 0;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FCCCF0;
+  color: black;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 5vh;
+}
+
+.carousel-item {
+  height: 83vh;
+  img {
+    height: 83vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 1000px) {
+    height: 62vh;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.marquee__inner {
+  display: inline-flex;
+  animation: scroll 12s linear infinite;
+}
+
+.marquee__inner span {
+  margin-right: 0;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+@media (max-width:768px) {
+  #Carrousel{
+  padding-top: 10vh;
+}
+
+}
