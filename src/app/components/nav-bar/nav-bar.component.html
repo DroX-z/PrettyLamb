@@ -18,16 +18,16 @@
     <li><a routerLink="menu" (click)="closeSidebar()">Menu</a></li>
     <li><a routerLink="flores" (click)="closeSidebar()">Flores + Cafe</a></li>
     <li><a routerLink="members" (click)="closeSidebar()">Pretty Lamb Members</a></li>
-    <li><a routerLink="sucursales" (click)="closeSidebar()">Sucursales</a></li>
-    <li><a routerLink="conocenos" (click)="closeSidebar()">Conócenos</a></li>
+    <li><a [routerLink]="['/home']" fragment="location" (click)="closeSidebar()">Sucursales</a></li>
+    <li><a [routerLink]="['/home']" fragment="about" (click)="closeSidebar()">Conócenos</a></li>
     <li style="display:flex; flex-direction:row; gap: .75rem;">
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-tiktok"></i>
+      <a target="_blank" href="https://www.instagram.com/prettylamb__/?hl=es"><i class="bi bi-instagram"></i></a>
+      <a target="_blank" href="https://www.tiktok.com/@prettylamb__"><i class="bi bi-tiktok"></i></a>
     </li>
   </ul>
 
 
-  <div class="cards">
+<div class="cards">
       <div class="icons">
       <i class="bi bi-credit-card"></i>
       <i class="bi bi-paypal"></i>

@@ -9,6 +9,8 @@
   z-index: 1000;
 }
 
+
+
 .logo{
   font-size: 2.5rem;
   font-family: "Old Standard TT", serif;
@@ -26,6 +28,11 @@
     p{
       margin: 0;
       padding-bottom: 1rem;
+    }
+    .icons{
+      i{
+        padding-right: 10px;
+      }
     }
   }
 
@@ -45,7 +52,7 @@
   background-color: #3D5CA1;
   color: #F9F6ED;
   padding: 2rem 2rem;
-  transition: left 0.35s ease;
+  transition: left 0.5s ease;
   z-index: 2000;
   overflow-y: auto;
 }
