@@ -4,21 +4,37 @@
        <div class="logo-cont"> <img src="assets/logo.webp" alt=""></div>
     <div class="text-cont">
       <ul>
-          <li>Menu</li>
-          <li>Flores + Cafe</li>
-          <li>Sucursales</li>
-          <li class=" d-block d-md-none">Conocenos</li>
-          <li class=" d-block d-md-none">Pretty Lamb Members</li>
-          <li class=" d-flex d-md-none social-icons"><i class="bi bi-instagram"></i><i class="bi bi-tiktok"></i></li>
+          <li><a routerLink="menu">Menu</a></li>
+          <li><a routerLink="flores">Flores + Cafe</a></li>
+          <li><a [routerLink]="['/home']" fragment="location">Sucursales</a></li>
+           <li class=" d-block d-md-none"><a [routerLink]="['/home']" fragment="about">Conócenos</a></li>
+           <li class=" d-block d-md-none"><a routerLink="members">Pretty Lamb Members</a></li>
+          <li class=" d-flex d-md-none social-icons">
+           <a target="_blank" href="https://www.instagram.com/prettylamb__/?hl=es">
+            <i class="bi bi-instagram"></i>
+           </a>
+          <a target="_blank" href="https://www.tiktok.com/@prettylamb__">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          </li>
 
       </ul>
     </div>
     <div class="text-cont2 d-none d-md-block">
       <ul>
-          <li>Conocenos</li>
-          <li>Pretty Lamb Members</li>
-          <li  class="social-icons"><i class="bi bi-instagram"></i><i class="bi bi-tiktok"></i></li>
-      </ul>
+        <li><a  [routerLink]="['/home']" fragment="about">Conócenos</a></li>
+        <li><a routerLink="members">Pretty Lamb Members</a></li>
+
+        <li class="social-icons">
+          <a target="_blank" href="https://www.instagram.com/prettylamb__/?hl=es">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a target="_blank" href="https://www.tiktok.com/@prettylamb__">
+            <i class="bi bi-tiktok"></i>
+          </a>
+        </li>
+    </ul>
+
     </div>
    </div>
     <div class="d-none d-md-block cards">

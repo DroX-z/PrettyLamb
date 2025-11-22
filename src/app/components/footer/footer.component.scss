@@ -2,7 +2,10 @@
   font-family: "Old Standard TT", serif;
   font-size: 1.2rem;
 }
-
+a{
+  text-decoration: none;
+  color: #F9F6ED;
+}
 footer{
   height: 40vh;
   background-color: #3D5CA1;
@@ -20,6 +23,9 @@ footer{
   display: flex;
   flex-direction: row;
   gap: 0.75rem !important;
+  a{
+    color: #F9F6ED;
+  }
 }
 
 .text-cont{
