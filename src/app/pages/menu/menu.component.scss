@@ -134,16 +134,18 @@ i{
 
 
 .product-modal.mobile {
-  top: auto;
-  bottom: -100%; /* fuera de pantalla abajo */
   width: 100%;
-  height: auto;
-  right: 0;
-  transition: bottom 0.5s ease;
+
+  height: 90vh;
+  top: auto;
+  bottom: 0;
+  transform: translateY(90vh);
+  transition: transform 0.45s ease-out;
+  will-change: transform;
 }
 
 .product-modal.mobile.open {
-  bottom: 0; /* entra desde abajo */
+    transform: translateY(0);
 }
 
 .modal-overlay {
